@@ -258,10 +258,10 @@
                     this.spawnY = this.hitBox[i].y; this.newSpawn = true; 
                     window.Game.particles.addParticles(this.x,this.y,this.scaleX/2,window.Game.theme.main_color4,1,25,true);
                 }
-                else if (this.hitBox[i].type == 4 && (i == 0 || i == 1) && this.gravity.isFalling()){ this.playerState = 0; createjs.Sound.play("impact"); }
+                else if (this.hitBox[i].type == 4 && (i == 3 || i == 2) && this.gravity.isFalling()){ this.playerState = 1; createjs.Sound.play("impact"); }
                 else if (this.hitBox[i].type == 5) {}
-                else if (this.hitBox[i].type == 6 && (i == 0 || i == 1) && this.gravity.isRising()){ this.playerState = 0; createjs.Sound.play("impact"); }
-                else if (this.hitBox[i].type == 7 && (i == 0 || i == 1)){ this.playerState = 1; createjs.Sound.play("impact"); }
+                else if (this.hitBox[i].type == 6 && (i == 0 || i == 1) && this.gravity.isRising()){ this.playerState = 1; createjs.Sound.play("impact"); }
+                else if (this.hitBox[i].type == 7 && (i == 1 || i == 2)){ this.playerState = 1; createjs.Sound.play("impact"); }
                 else if (this.hitBox[i].type == 8){ //grow
                     this.scaleX = this.scaleY = window.Game.box16; 
                     window.Game.particles.addParticles(this.x, this.y, this.scaleX/2, window.Game.theme.main_color4, 1, 25, true); 
